@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_lines",
+  "info": {
+    "name": "OrderLine"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "product": {
+      "model": "product"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "selected_size": {
+      "type": "float"
+    },
+    "selected_color": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "name": "Color"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "color": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

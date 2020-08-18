@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_geo_locations",
+  "info": {
+    "name": "Location",
+    "icon": "map-pin"
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "float"
+    },
+    "lng": {
+      "type": "float"
+    }
+  }
+}
