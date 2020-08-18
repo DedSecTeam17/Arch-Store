@@ -20,6 +20,10 @@
     },
     "selected_color": {
       "type": "string"
+    },
+    "order": {
+      "via": "order_lines",
+      "model": "order"
     }
   }
 }

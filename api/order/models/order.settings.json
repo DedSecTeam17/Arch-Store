@@ -9,9 +9,6 @@
     "timestamps": true
   },
   "attributes": {
-    "order_lines": {
-      "collection": "order-line"
-    },
     "user": {
       "plugin": "users-permissions",
       "model": "user"
@@ -24,6 +21,26 @@
     },
     "total": {
       "type": "float"
+    },
+    "order_lines": {
+      "collection": "order-line",
+      "via": "order"
+    },
+    "order_id": {
+      "type": "uid",
+      "required": false
+    },
+    "phone": {
+      "type": "string"
+    },
+    "f_name": {
+      "type": "string"
+    },
+    "l_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
     }
   }
 }

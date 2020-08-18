@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/orders": {
+    "/reviews": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Order"
+                    "$ref": "#/components/schemas/Review"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Review"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Review"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Review"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrder"
+                "$ref": "#/components/schemas/NewReview"
               }
             }
           }
         }
       }
     },
-    "/orders/count": {
+    "/reviews/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Review"
         ],
         "parameters": []
       }
     },
-    "/orders/{id}": {
+    "/reviews/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Review"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Review"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Review"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Review"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrder"
+                "$ref": "#/components/schemas/NewReview"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Review"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Order": {
+      "Review": {
         "required": [
           "id"
         ],
@@ -558,7 +558,7 @@
               }
             }
           },
-          "order_state": {
+          "product": {
             "required": [
               "id"
             ],
@@ -566,96 +566,65 @@
               "id": {
                 "type": "string"
               },
-              "state": {
+              "name": {
                 "type": "string"
-              }
-            }
-          },
-          "location": {
-            "type": "string"
-          },
-          "total": {
-            "type": "number"
-          },
-          "order_lines": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
+              },
+              "images": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "product": {
-                  "type": "string"
-                },
-                "quantity": {
-                  "type": "integer"
-                },
-                "selected_size": {
-                  "type": "number"
-                },
-                "selected_color": {
-                  "type": "string"
-                },
-                "order": {
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "discount": {
+                "type": "number"
+              },
+              "colors": {
+                "type": "string"
+              },
+              "sizes": {
+                "type": "string"
+              },
+              "preview_image": {
+                "type": "string"
+              },
+              "categories": {
+                "type": "string"
+              },
+              "reviews": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
               }
             }
           },
-          "order_id": {
-            "type": "uid"
-          },
-          "phone": {
+          "review": {
             "type": "string"
           },
-          "f_name": {
-            "type": "string"
-          },
-          "l_name": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
+          "ratting": {
+            "type": "integer"
           }
         }
       },
-      "NewOrder": {
+      "NewReview": {
         "properties": {
           "user": {
             "type": "string"
           },
-          "order_state": {
+          "product": {
             "type": "string"
           },
-          "location": {
+          "review": {
             "type": "string"
           },
-          "total": {
-            "type": "number"
-          },
-          "order_lines": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "order_id": {
-            "type": "uid"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "f_name": {
-            "type": "string"
-          },
-          "l_name": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
+          "ratting": {
+            "type": "integer"
           }
         }
       }
@@ -663,7 +632,7 @@
   },
   "tags": [
     {
-      "name": "Order"
+      "name": "Review"
     }
   ]
 }

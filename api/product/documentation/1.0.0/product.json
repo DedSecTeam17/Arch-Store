@@ -700,6 +700,31 @@
                 "type": "string"
               }
             }
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "review": {
+                  "type": "string"
+                },
+                "ratting": {
+                  "type": "integer"
+                }
+              }
+            }
           }
         }
       },
@@ -725,6 +750,12 @@
           },
           "categories": {
             "type": "string"
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

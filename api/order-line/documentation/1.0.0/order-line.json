@@ -572,6 +572,12 @@
               },
               "categories": {
                 "type": "string"
+              },
+              "reviews": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -583,6 +589,49 @@
           },
           "selected_color": {
             "type": "string"
+          },
+          "order": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "order_state": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "total": {
+                "type": "number"
+              },
+              "order_lines": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "order_id": {
+                "type": "uid"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "f_name": {
+                "type": "string"
+              },
+              "l_name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -598,6 +647,9 @@
             "type": "number"
           },
           "selected_color": {
+            "type": "string"
+          },
+          "order": {
             "type": "string"
           }
         }

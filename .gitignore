@@ -66,10 +66,10 @@ $RECYCLE.BIN/
 ############################
 
 # .tmp
-*.log
-*.sql
-*.sqlite
-*.sqlite3
+# *.log
+# *.sql
+# *.sqlite
+# *.sqlite3
 
 
 ############################
